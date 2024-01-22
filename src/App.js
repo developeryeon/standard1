@@ -15,7 +15,7 @@ function App() {
 			tempResult += `${index}: ${item}, `;
 		});
 
-		setResult(tempResult.slice(0, -2)); //쉼표와 공백 제외
+		setResult(tempResult.slice(0, -2)); 
 	};
 
 	const handleFilter = () => {
@@ -30,7 +30,7 @@ function App() {
 	};
 
 	const handleMap = () => {
-		//array를 대문자로 변환하여 출력
+		
 		const mappedList = array.map((fruit) => {
 			return fruit.toUpperCase();
 		});
@@ -45,12 +45,7 @@ function App() {
 	};
 
 	const handlePush = () => {
-		// if (!query) {
-		// 	alert('값이 없습니다!');
-		// 	return false;
-		// }
-
-		// input 태그에 입력한 값이 결과의 끝에 달라붙도록!
+		
 		const newArr = [...array, query];
 		setArray(newArr);
 		setResult(newArr.join(', '));
@@ -58,7 +53,7 @@ function App() {
 
 	const handlePop = () => {
 		const newArr = [...array];
-		newArr.pop(); //마지막 요소 제거
+		newArr.pop();
 		setArray(newArr);
 		setResult(newArr.join(', '));
 	};
@@ -66,7 +61,7 @@ function App() {
 	const handleSlice = () => {
 		const newArr = [...array];
 		const sliceArr = newArr.slice(1, -1);
-		//setArray(sliceArr); // 이건 기존 Array : 쪽 배열을 바꿈
+		//setArray(sliceArr); 
 		setResult(sliceArr.join(', '));
 	};
 
